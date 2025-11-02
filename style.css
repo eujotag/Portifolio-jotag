@@ -1,0 +1,222 @@
+
+
+body {
+    background-color: black;
+    color: white;
+}
+
+
+/* Cabecalho e nav bar */
+header {
+    color: white;
+    padding: 20px 50px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #5F6B70;
+    font-family: "Open Sans", sans-serif;
+}
+
+nav ul li a:hover {
+  color: #F20530;
+  
+  border-bottom: 2px solid #F20530;
+  padding-bottom: 4px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a.ativo {
+  color: #F20530;
+  transition: all 0.3s ease;
+}
+
+/* Main */
+
+main {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.main {
+    background-color: #0D0D0D;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    padding: 50px 20px;
+    border-radius: 10px;
+    width: 90%; /* Aumenta a porcentagem da largura que ele ocupa (antes era 80%) */
+    max-width: 1400px;
+    
+}
+
+.text-content{
+    text-align: left;
+    max-width: 1000px;
+    align-items: center;
+}
+
+
+.button {
+    background-color: #F20530;
+    color: #ffffff;
+    border-radius: 10px;
+    width: auto;
+    height: auto;
+    padding: 10px 20px;
+    border: none;
+    box-shadow: none;
+    display: flex;
+}
+
+.main img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.main h1 {
+    margin-bottom: 0px;
+    font-size: 3.0em;
+    font-family: "Open Sans", sans-serif;
+
+}
+
+.main p {
+    margin-bottom: 10px;
+    font-size: 1.0em;
+    font-family: "Open Sans", sans-serif;
+    text-align: justify;
+    
+}
+
+.destaque {
+    color: #F20530;
+    font-size: 1.0em;
+}
+/* Sobre-mim */
+
+.sobre-mim {
+    font-size: 1.0em;
+    font-family: "Open Sans", sans-serif;
+}
+
+.sobre-mim h1{
+    text-align: center;
+    color: #F20530
+}
+
+.sobre-mim h2 {
+    font-size: 4.0em;
+    
+}
+
+.sobre-mim p {
+    text-align: justify;
+    max-width: 1500px;
+    justify-content: center;
+    padding: 0px 10% 0px;
+    margin-bottom: 20px;
+}
+
+.badges {
+    background-color: #0D0D0D;
+    display: flex;
+    padding: 0px 40px 0px 40px;
+    gap: 50px;
+    text-align: center;
+    margin-top: 40px;
+
+}
+
+.badges h2 {
+    margin-bottom: 0;
+}
+
+.badges h3 {
+    margin-top: 0;
+}
+
+.projetos-completos {
+    padding: 0px 40px 0px 40px;
+    
+}
+/* Minhas habilidades*/
+
+.skills h1 {
+    color: #F20530;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+}
+
+.skills p {
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+}
+
+.skill-list-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.skill-card{
+    background-color: #0D0D0D;
+    text-align: center;
+    width: 150px;
+    padding: 20px 10px;
+    border-radius: 10px;
+}
+
+/* Meus projetos*/
+
+.meus-projetos {
+    background-color: #0D0D0D;
+    display: flex;
+    padding: 0px 40px 0px 40px;
+    gap: 50px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.meus-projetos h1 {
+    font-family: "Open Sans", sans-serif;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    
+    
+}
+
+.meus-projetos h2 {
+    font-family: "Open Sans", sans-serif;
+    color: #F20530;
+    text-align: center;
+    display: flex;
+    
+    
+}
+
+.project-grid{
+    display: flex;
+    padding: 0px 40px 0px 40px;
+    gap: 50px;
+    text-align: center;
+    margin-top: 40px;
+}
