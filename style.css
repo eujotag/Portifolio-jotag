@@ -1,4 +1,7 @@
-
+/* Configuração Global para Rolagem Suave */
+html {
+    scroll-behavior: smooth; 
+}
 
 body {
     background-color: black;
@@ -8,6 +11,15 @@ body {
 
 /* Cabecalho e nav bar */
 header {
+    /* MODIFICAÇÕES PARA TORNAR FIXO */
+    position: fixed;
+    top: 0;
+    width: 100%; 
+    z-index: 1000; 
+    background-color: black; /* Fundo sólido para cobrir o conteúdo */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); 
+    /* FIM DAS MODIFICAÇÕES */
+    
     color: white;
     padding: 20px 50px;
 }
@@ -31,24 +43,27 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #F20530;
-  
-  border-bottom: 2px solid #F20530;
-  padding-bottom: 4px;
-  transition: all 0.3s ease;
+    color: #F20530;
+    border-bottom: 2px solid #F20530;
+    padding-bottom: 4px;
+    transition: all 0.3s ease;
 }
 
 nav ul li a.ativo {
-  color: #F20530;
-  transition: all 0.3s ease;
+    color: #F20530;
+    transition: all 0.3s ease;
 }
 
-/* Main */
+/* Main (Home) */
+
+main#home {
+    /* ADICIONADO: Espaço para o header fixo não cobrir o conteúdo */
+    padding-top: 100px; 
+}
 
 main {
     display: flex;
     justify-content: center;
-    
 }
 
 .main {
@@ -58,9 +73,8 @@ main {
     align-items: center;
     padding: 50px 20px;
     border-radius: 10px;
-    width: 90%; /* Aumenta a porcentagem da largura que ele ocupa (antes era 80%) */
+    width: 90%; 
     max-width: 1400px;
-    
 }
 
 .text-content{
@@ -68,7 +82,6 @@ main {
     max-width: 1000px;
     align-items: center;
 }
-
 
 .button {
     background-color: #F20530;
@@ -80,6 +93,7 @@ main {
     border: none;
     box-shadow: none;
     display: flex;
+    cursor: pointer;
 }
 
 .main img{
@@ -108,11 +122,13 @@ main {
     color: #F20530;
     font-size: 1.0em;
 }
+
 /* Sobre-mim */
 
 .sobre-mim {
     font-size: 1.0em;
     font-family: "Open Sans", sans-serif;
+    padding: 60px 0;
 }
 
 .sobre-mim h1{
@@ -122,7 +138,6 @@ main {
 
 .sobre-mim h2 {
     font-size: 4.0em;
-    
 }
 
 .sobre-mim p {
@@ -136,7 +151,8 @@ main {
 .badges {
     background-color: #0D0D0D;
     display: flex;
-    padding: 0px 40px 0px 40px;
+    justify-content: center;
+    padding: 40px;
     gap: 50px;
     text-align: center;
     margin-top: 40px;
@@ -151,72 +167,333 @@ main {
     margin-top: 0;
 }
 
-.projetos-completos {
-    padding: 0px 40px 0px 40px;
-    
-}
 /* Minhas habilidades*/
+
+.skills {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
 
 .skills h1 {
     color: #F20530;
     text-align: center;
     font-family: "Open Sans", sans-serif;
+    margin-top: 40px;
 }
 
 .skills p {
     text-align: center;
     font-family: "Open Sans", sans-serif;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    padding: 0 20px;
 }
 
 .skill-list-container{
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px 0;
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 30px; 
+    padding: 20px 50px;
 }
 
 .skill-card{
-    background-color: #0D0D0D;
+    background-color: #0D0D0D; 
     text-align: center;
-    width: 150px;
+    width: 150px; 
     padding: 20px 10px;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skill-card h2.skill-title {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: white; 
+}
+
+.skill-icon {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.skill-porcentagem {
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.barra-de-progresso {
+    background-color: #2e2e2e;
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #F20530; 
+    border-radius: 4px;
 }
 
 /* Meus projetos*/
 
 .meus-projetos {
-    background-color: #0D0D0D;
-    display: flex;
-    padding: 0px 40px 0px 40px;
-    gap: 50px;
-    text-align: center;
-    margin-top: 40px;
+    background-color: black; 
+    padding: 60px 20px;
+    font-family: "Open Sans", sans-serif;
+    text-align: center; 
 }
 
 .meus-projetos h1 {
-    font-family: "Open Sans", sans-serif;
     color: #ffffff;
-    text-align: center;
-    display: flex;
-    
-    
+    margin-bottom: 50px;
+    font-size: 2.5em; 
 }
 
-.meus-projetos h2 {
-    font-family: "Open Sans", sans-serif;
+.projects-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
+.project-card {
+    background-color: #0D0D0D;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: left;
+    padding-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.project-details {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.project-details h2 {
+    font-size: 1.2em;
     color: #F20530;
-    text-align: center;
-    display: flex;
-    
-    
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 600;
 }
 
-.project-grid{
+.project-details p {
+    font-size: 0.9em;
+    color: #ccc;
+    line-height: 1.5;
+    text-align: justify;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.project-button {
+    background-color: #F20530;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    align-self: flex-start;
+    transition: background-color 0.3s ease;
+}
+
+.project-button:hover {
+    background-color: #a0031f;
+}
+
+/* Seção Fale Comigo (Contato) */
+
+.contato {
+    padding: 80px 50px;
+    font-family: "Open Sans", sans-serif;
+    color: white;
+}
+
+.contato-content-wrapper {
     display: flex;
-    padding: 0px 40px 0px 40px;
-    gap: 50px;
+    justify-content: center;
+    gap: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.formulario-container {
+    flex: 1; 
+    max-width: 600px;
+}
+
+.contato h1 {
+    color: #F20530;
+    font-size: 2.5em;
+    margin-bottom: 5px;
+}
+
+.contato h2 {
+    font-size: 1.2em;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 1em;
+}
+
+.formulario input[type="text"], 
+.formulario input[type="email"], 
+.formulario textarea {
+    width: 100%;
+    padding: 15px;
+    background-color: #0D0D0D;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.formulario textarea {
+    resize: vertical;
+}
+
+.button-submit {
+    background-color: #F20530;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 25px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    align-self: flex-start;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.button-submit:hover {
+    background-color: #a0031f;
+}
+
+.sprite-area {
+    flex: 1;
+    max-width: 400px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-color: #cccccc;
+    height: 500px;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
     text-align: center;
-    margin-top: 40px;
+}
+
+.sprite-area::before {
+    content: "Sprite";
+    color: #444;
+    font-size: 2em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sprite-image {
+    display: none; 
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.logo-footer {
+    color: #F20530;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: auto;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+
+/* Media Queries */
+
+@media (max-width: 1024px) {
+    /* Projetos para Tablets */
+    .projects-grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 850px) {
+    /* Contato para Telas Menores */
+    .contato-content-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sprite-area {
+        height: 300px;
+        width: 100%;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    /* Projetos para Celulares */
+    .projects-grid-container {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Outros ajustes de padding para celulares */
+    header, .contato {
+        padding: 20px 20px;
+    }
+    
+    .main {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .main img {
+        width: 200px;
+        height: 200px;
+    }
 }
