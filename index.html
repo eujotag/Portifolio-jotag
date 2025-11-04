@@ -12,31 +12,31 @@
 <body>
     <header>
         <nav>
-            <img src="assets/logo jg aberta.png" alt="Logo João Guilherme"> <a href="Home"></a>
+            <img src="assets/logo jg aberta.png" alt="Logo João Guilherme"> <a href="#home"></a>
             <ul>
-                <li><a href="Home" class="ativo">Home</a></li>
-                <li><a href="sobre-mim">Sobre-mim</a></li>
-                <li><a href="projetos">Projetos</a></li>
-                <li><a href="skills">Skils</a></li>
-                <li><a href="contato">Contato</a></li>
+                <li><a href="#home" class="ativo">Home</a></li>
+                <li><a href="#sobre-mim">Sobre-mim</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#skills">Skils</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main id="home">
         <div class="main">
-        <img src="assets/jotag-foto-perfil.png" alt="imagem-jg">
-        <div class="text-content">
-        <h1>Olá, Eu sou <span class="destaque">Desenvolvedor <br> Full-Stack + UI/UX Designer</span></h1>
-        <p>Me chamo João Guilherme, Desenvolvedor Web em formação. Possuo base sólida em Figma, HTML5, CSS3 e JavaScript, além de proficiência em Git/GitHub. 
-            Sou focado(a) na prática constante e na criação de soluções web responsivas e funcionais. Busco oportunidades para aplicar meu conhecimento, evoluir
-             em frameworks e crescer como profissional. Pronto(a) para codificar e aprender.</p>
-        <button class="button">Fale comigo</button>
-        </div>
+            <img src="assets/jotag-foto-perfil.png" alt="imagem-jg">
+            <div class="text-content">
+                <h1>Olá, Eu sou <span class="destaque">Desenvolvedor <br> Full-Stack + UI/UX Designer</span></h1>
+                <p>Me chamo João Guilherme, Desenvolvedor Web em formação. Possuo base sólida em Figma, HTML5, CSS3 e JavaScript, além de proficiência em Git/GitHub. 
+                    Sou focado(a) na prática constante e na criação de soluções web responsivas e funcionais. Busco oportunidades para aplicar meu conhecimento, evoluir
+                    em frameworks e crescer como profissional. Pronto(a) para codificar e aprender.</p>
+                <button class="button">Fale comigo</button>
+            </div>
         </div>
     </main>
 
-    <section class="sobre-mim">
+    <section class="sobre-mim" id="sobre-mim">
         <h1>Sobre mim</h1>
         <p class="paragrafo-destaque">Sou João Guilherme, desenvolvedor web com foco em HTML, CSS e JavaScript. Crio sites modernos, 
             responsivos e bem estruturados, sempre pensando na experiência do usuário. Também trabalho com 
@@ -44,102 +44,136 @@
             Apaixonado por tecnologia, estou sempre aprendendo novas ferramentas e buscando evoluir a cada projeto.</p>
         <div class="badges">
             <div class="projetos-completos">
-            <h2>10+</h2>
-            <h3>Projetos Completos</h3>
+                <h2>10+</h2>
+                <h3>Projetos Completos</h3>
             </div>
             <div class="anos-experiencia">
-            <h2>2.0</h2>
-            <h3>Anos de Experiência</h3>
+                <h2>2.0</h2>
+                <h3>Anos de Experiência</h3>
             </div>
-
-            
         </div>
     </section>
 
-    <section class="skills">
-    <h1>Minhas Habilidades</h1>
-    <p>Desenvolvo com HTML, CSS e JavaScript, usando React, React Native e Bootstrap para criar interfaces 
-        modernas e responsivas. Também trabalho com Figma, unindo design e código para entregar soluções 
-        completas e criativas.</p>
+    <section class="skills" id="skills">
+        <h1>Minhas Habilidades</h1>
+        <p>Desenvolvo com HTML, CSS e JavaScript, usando React, React Native e Bootstrap para criar interfaces 
+            modernas e responsivas. Também trabalho com Figma, unindo design e código para entregar soluções 
+            completas e criativas.</p>
 
-    <div class="skll-list-container">
+        <div class="skill-list-container">
 
-                  
-            <div class="skill-card"></div>
-            <h2 class="skill-title">Html</h2>  
-            <img class="skill-icon" src="logos/html5.png" alt="Ícone Html">
-
-            <p class="skill-porcentagem">60%</p>
-
-            <div class="barra-de-progresso">
-                <div class="progress-fill html-fill" style="width: 60%;"></div>
-
-            </div>
-            
-            <h2>Css</h2>
-            <div class="skill-card"></div>
-            <img src="assets/" alt="Ícone Css">
-            
-            <h2>JavaScript</h2>
-            <div class="skill-card"></div>
-            <img src="assets/" alt="Ícone JavaScript">
-            
-            <h2>React Native</h2>
-            <div class="skill-card"></div>
-            <img src="assets/" alt="Ícone React Native">
-
-            
-            <h2>Figma</h2>
-            <div class="skill-card"></div>
-            <img src="assets/" alt="Ícone Figma">
-    </div>
-    </section>
-
-    <section class="meus-projetos">
-        <div class="projects">
-            <h1>Meus projetos</h1>
-            <div class="project-grid">
-                <img src="projetos/ajugo.png" alt="Aju-go Print">
-                <h2>AjuGo – Sistema Integrado de Mobilidade Urbana para Smart Cities (Figma)</h2>
-                <p>Protótipo de projeto vencedor desenvolvido em parceria com a Universidade 
-                    Tiradentes (UNIT), o AjuGo é uma solução inovadora de monitoramento e gestão 
-                    de frotas voltada à otimização da mobilidade urbana. O sistema integra dados 
-                    de transporte público para auxiliar gestores na tomada de decisões em tempo real,
-                     como reforço de linhas e redistribuição de ônibus.</p>
+            <div class="skill-card">
+                <h2 class="skill-title">HTML</h2> 
+                <img class="skill-icon" src="logos/html5.png" alt="Ícone Html"> 
+                <p class="skill-porcentagem">60%</p>
+                <div class="barra-de-progresso">
+                    <div class="progress-fill html-fill" style="width: 60%;"></div>
+                </div>
             </div>
 
-            <div class="project-grid">
-                <img src="assets/" alt="HeroTask Print">
-                <h2>HeroTask – Gerenciador de tarefas gameficado (Figma)</h2>
-                <p>Projeto autoral desenvolvido no Figma, o TaskQuest une produtividade e diversão 
-                    com uma interface em pixel art original. O app transforma tarefas diárias em 
-                    desafios, recompensando o usuário com XP a cada meta concluída, tornando a 
-                    organização pessoal mais leve e envolvente.</p>
+            <div class="skill-card">
+                <h2 class="skill-title">CSS</h2>
+                <img class="skill-icon" src="logos/css-logo.png" alt="Ícone Css">
+                <p class="skill-porcentagem">40%</p>
+                <div class="barra-de-progresso">
+                    <div class="progress-fill css-fill" style="width: 40%;"></div>
+                </div>
             </div>
 
-              <div class="project-grid">
-                <img src="assets/" alt="temporario">
-                <h2>temporario</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                    Recusandae rem, nemo reiciendis commodi laudantium autem unde officiis facilis 
-                    illum corporis exercitationem, dolore hic dicta inventore id voluptas eveniet quos! 
-                    Voluptatem.</p>
+            <div class="skill-card">
+                <h2 class="skill-title">JavaScript</h2>
+                <img class="skill-icon" src="logos/JavaScript-logo.png" alt="Ícone JavaScript">
+                <p class="skill-porcentagem">30%</p>
+                <div class="barra-de-progresso">
+                    <div class="progress-fill js-fill" style="width: 30%;"></div>
+                </div>
             </div>
-           
+            
+            <div class="skill-card">
+                <h2 class="skill-title">React Native</h2>
+                <img class="skill-icon" src="logos/react-native.png" alt="Ícone React Native">
+                <p class="skill-porcentagem">10%</p>
+                <div class="barra-de-progresso">
+                    <div class="progress-fill rn-fill" style="width: 10%;"></div>
+                </div>
+            </div>
+            
+            <div class="skill-card">
+                <h2 class="skill-title">Figma</h2>
+                <img class="skill-icon" src="logos/figma.png" alt="Ícone Figma">
+                <p class="skill-porcentagem">80%</p>
+                <div class="barra-de-progresso">
+                    <div class="progress-fill figma-fill" style="width: 80%;"></div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="Fale comigo">
-        <h1>Fale Comigo</h1>
-        <h2>Vamos conversar sobre design, front-end ou novos projetos!</h2>
+    <section class="meus-projetos" id="projetos">
+        <h1>Meus projetos</h1>
 
-        <div class="Formulário">
-        <p>Nome</p>
-        <input type="text" name="nome" id="nome">
-        <p>E-mail</p>
-        <input type="text" name="E-mail" id="E-mail">
-        <p>Mensagem</p>
-        <input type="text" name="Mensagem" id="Mensagem">
+        <div class="projects-grid-container"> 
+
+            <div class="project-card"> 
+                <img src="projetos/ajugo.png" alt="AjuGo Print">
+                <div class="project-details">
+                    <h2>AjuGo – Sistema Integrado de Mobilidade Urbana para Smart Cities (Figma)</h2>
+                    <p>Protótipo de projeto vencedor desenvolvido em parceria com a Universidade Tiradentes (UNIT), o AjuGo é uma solução inovadora de monitoramento e gestão de frotas voltada à otimização da mobilidade urbana. O sistema integra dados de transporte público para auxiliar gestores na tomada de decisões em tempo real, como reforço de linhas e redistribuição de ônibus.</p>
+                    <button class="project-button">Ver projeto</button>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="assets/herotask.png" alt="HeroTask Print">
+                <div class="project-details">
+                    <h2>HeroTask – Gerenciador de tarefas gameficado (Figma)</h2>
+                    <p>Projeto autoral desenvolvido no Figma, o HeroTask une produtividade e diversão com uma interface em pixel art original. O app transforma tarefas diárias em desafios, recompensando o usuário com XP a cada meta concluída, tornando a organização pessoal mais leve e envolvente.</p>
+                    <button class="project-button">Ver projeto</button>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="assets/ajugo-copy.png" alt="AjuGo Print">
+                <div class="project-details">
+                    <h2>AjuGo – Sistema Integrado de Mobilidade Urbana para Smart Cities</h2>
+                    <p>Projeto desenvolvido em parceria com a Universidade Tiradentes (UNIT), o AjuGo é uma solução inovadora de monitoramento e gestão de frotas voltada à otimização da mobilidade urbana. O sistema integra dados de transporte público para auxiliar gestores na tomada de decisões em tempo real, como reforço de linhas e redistribuição de ônibus.</p>
+                    <button class="project-button">Ver projeto</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contato" id="contato">
+        <div class="contato-content-wrapper">
+            
+            <div class="formulario-container">
+                <h1>Fale Comigo</h1>
+                <h2>Vamos conversar sobre design, front-end ou novos projetos!</h2>
+        
+                <form action="#" method="POST" class="formulario">
+                    <div class="input-group">
+                        <label for="nome">Nome</label>
+                        <input type="text" name="nome" id="nome" required>
+                    </div>
+        
+                    <div class="input-group">
+                        <label for="email">Endereço de e-mail</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+        
+                    <div class="input-group">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea name="mensagem" id="mensagem" rows="8" required></textarea> 
+                    </div>
+
+                    <button type="submit" class="button-submit">Enviar mensagem</button>
+                </form>
+            </div>
+
+            <div class="sprite-area">
+                <img src="assets/sprite-placeholder.png" alt="Desenho de João Guilherme esperando o telefone tocar" class="sprite-image">
+                <p class="logo-footer"> &lt;jg&gt; </p>
+            </div>
         </div>
     </section>
 </body>
